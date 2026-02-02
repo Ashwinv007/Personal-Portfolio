@@ -123,3 +123,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* --- Global theme --- */
+/* html,
+body {
+  background-color: #050505;
+  color: #e5e7eb;
+} */
+
+/* --- Glow utilities --- */
+.glow-green {
+  box-shadow: 0 0 60px rgba(0, 255, 136, 0.25);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.25);
+}
