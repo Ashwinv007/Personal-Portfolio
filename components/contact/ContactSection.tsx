@@ -2,6 +2,7 @@ import { createMessage } from "@/use-cases/create-message"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function ContactSection() {
   return (
@@ -30,9 +31,9 @@ export default function ContactSection() {
 
             <div className="space-y-4">
   {[
-    { label: "Email", value: "ashwinv7527@gmail.com" },
-    { label: "Phone", value: "+91 8078514587" },
-    { label: "Location", value: "Trivandrum, Kerala, India" },
+    { label: "Email", value: "ashwinv7527@gmail.com", icon: Mail },
+    { label: "Phone", value: "+91 8078514587", icon: Phone },
+    { label: "Location", value: "Trivandrum, Kerala, India", icon: MapPin },
   ].map((item) => (
     <div
       key={item.label}
@@ -44,7 +45,9 @@ export default function ContactSection() {
         px-5 py-4
       "
     >
-      <div className="h-10 w-10 rounded-lg bg-green-400/20" />
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-400/20 text-green-400">
+        <item.icon className="h-5 w-5" />
+      </div>
       <div>
         <p className="text-xs text-neutral-500">
           {item.label}

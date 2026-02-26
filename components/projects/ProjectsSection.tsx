@@ -1,8 +1,9 @@
-import ProjectCard from "./ProjectCard"
 import { getProjects } from "@/use-cases/get-projects"
+import { getCategories } from "@/use-cases/get-categories"
+import ProjectsFilter from "./ProjectsFilter"
 
 export default async function ProjectsSection() {
-  const projects = await getProjects()
+  const [projects, categories] = await Promise.all([getProjects(), getCategories()])
 
   return (
     <section className="relative py-20 p-15">
@@ -16,22 +17,8 @@ export default async function ProjectsSection() {
   </span>
 </h2>
 
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              title={project.name}
-              description={project.description}
-              imageUrl={project.image_url}
-              tech={project.tech ?? []}
-              demoUrl={project.demo_url}
-              sourceUrl={project.source_url}
-            />
-          ))}
-        </div>
+        <ProjectsFilter projects={projects} categories={categories} />
       </div>
     </section>
   )
 }
- 

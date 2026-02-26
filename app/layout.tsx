@@ -1,4 +1,12 @@
 import "./globals.css"
+import { Inter } from "next/font/google"
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+})
 
 export default function RootLayout({
   children,
@@ -6,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body>
+    <html lang="en" className={`dark ${inter.variable}`}>
+      <body className="font-sans">
         {children}
       </body>
     </html>
