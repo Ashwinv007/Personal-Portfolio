@@ -2,7 +2,7 @@ import { createMessage } from "@/use-cases/create-message"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function ContactSection() {
   return (
@@ -21,12 +21,13 @@ export default function ContactSection() {
           {/* Left info */}
 <div className="space-y-6 text-neutral-400">
             <h3 className="text-2xl font-medium text-white">
-              Let’s Work Together
+              Let's Work Together
             </h3>
 
             <p>
-              I’m always open to discussing new projects, creative ideas,
-              or opportunities to be part of your vision.
+              I'm always open to discussing new projects, creative ideas,
+              or opportunities to be part of your vision. Feel free to reach
+              out through the contact form or connect with me directly.
             </p>
 
             <div className="space-y-4">
@@ -72,37 +73,46 @@ export default function ContactSection() {
     backdrop-blur
     p-8"
           >
-            <Input
-              name="name"
-              placeholder="Your Name"
-              required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
+            <h3 className="text-xl font-semibold text-white mb-2">Send Me a Message</h3>
 
-            />
+            <div className="space-y-1">
+              <label className="text-sm text-neutral-400">Your Name</label>
+              <Input
+                name="name"
+                placeholder="Your Name"
+                required
+                className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
+              />
+            </div>
 
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email Address"
-              required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
+            <div className="space-y-1">
+              <label className="text-sm text-neutral-400">Email Address</label>
+              <Input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                required
+                className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
+              />
+            </div>
 
-            />
+            <div className="space-y-1">
+              <label className="text-sm text-neutral-400">Your Message</label>
+              <Textarea
+                name="message"
+                placeholder="Tell me about your project..."
+                rows={5}
+                required
+                className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
+              />
+            </div>
 
-            <Textarea
-              name="message"
-              placeholder="Tell me about your project..."
-              rows={5}
-              required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
-
-            />
-
-            <Button type="submit" className="w-full
+            <Button type="submit" className="w-full gap-2
     bg-[#00FF88]
     text-black
     hover:shadow-[0_0_40px_rgba(0,255,136,0.5)]
     transition-all">
+              <Send className="h-4 w-4" />
               Send Message
             </Button>
           </form>
