@@ -27,7 +27,7 @@ export default function Footer() {
               <a
                 href="https://github.com/yourusername"
                 target="_blank"
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 hover:border-green-400 transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
                 <Github className="h-5 w-5 text-white" />
               </a>
@@ -35,14 +35,14 @@ export default function Footer() {
               <a
                 href="https://linkedin.com/in/yourusername"
                 target="_blank"
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 hover:border-green-400 transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
                 <Linkedin className="h-5 w-5 text-white" />
               </a>
 
               <a
                 href="mailto:your@email.com"
-                className="flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 hover:border-green-400 transition-colors"
+                className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
                 <Mail className="h-5 w-5 text-white" />
               </a>
@@ -64,7 +64,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-green-400 transition-colors text-sm"
+                    className="text-muted-foreground hover:text-[#00FF88] transition-colors text-sm"
                   >
                     {link.label}
                   </a>

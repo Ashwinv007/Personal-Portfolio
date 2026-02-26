@@ -39,8 +39,8 @@ export default function ProjectsFilter({ projects, categories }: Props) {
           onClick={() => setActive(null)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
             active === null
-              ? "bg-green-400 text-black"
-              : "border border-neutral-700 text-neutral-400 hover:border-green-400 hover:text-green-400"
+              ? "bg-[#00FF88] text-black"
+              : "border border-neutral-700 text-neutral-400 hover:border-[#00FF88] hover:text-[#00FF88]"
           }`}
         >
           All
@@ -51,8 +51,8 @@ export default function ProjectsFilter({ projects, categories }: Props) {
             onClick={() => setActive(cat.id)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
               active === cat.id
-                ? "bg-green-400 text-black"
-                : "border border-neutral-700 text-neutral-400 hover:border-green-400 hover:text-green-400"
+                ? "bg-[#00FF88] text-black"
+                : "border border-neutral-700 text-neutral-400 hover:border-[#00FF88] hover:text-[#00FF88]"
             }`}
           >
             {cat.name}

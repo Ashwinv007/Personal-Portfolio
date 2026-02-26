@@ -54,7 +54,7 @@ export default async function Skills() {
           Skills
         </h2>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 p-15">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6">
           {skills.map((skill) => {
             const IconComponent = getSkillIcon(skill.icon)
             return (

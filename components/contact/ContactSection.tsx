@@ -6,15 +6,15 @@ import { Mail, Phone, MapPin } from "lucide-react"
 
 export default function ContactSection() {
   return (
-  <section className="relative py-28 p-8">
-      <div className="container mx-auto">
-        <p className="text-center text-sm tracking-widest text-green-400 mb-2">
+  <section className="relative py-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <p className="text-center text-sm tracking-widest text-[#00FF88] mb-2">
           CONTACT
         </p>
-<div className="mx-auto mb-6 h-[2px] w-12 bg-green-400" />
+<div className="mx-auto mb-6 h-[2px] w-12 bg-[#00FF88]" />
 
-        <h2 className="text-center text-4xl font-medium mb-16">
-  Get In <span className="text-green-400">Touch</span>
+        <h2 className="text-center text-4xl font-medium leading-tight mb-16">
+  Get In <span className="text-[#00FF88]">Touch</span>
         </h2>
 
         <div className="grid gap-10 lg:grid-cols-2">
@@ -45,7 +45,7 @@ export default function ContactSection() {
         px-5 py-4
       "
     >
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-400/20 text-green-400">
+      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#00FF88]/20 text-[#00FF88]">
         <item.icon className="h-5 w-5" />
       </div>
       <div>
@@ -76,7 +76,7 @@ export default function ContactSection() {
               name="name"
               placeholder="Your Name"
               required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-green-400"
+              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
 
             />
 
@@ -85,7 +85,7 @@ export default function ContactSection() {
               type="email"
               placeholder="Email Address"
               required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-green-400"
+              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
 
             />
 
@@ -94,12 +94,12 @@ export default function ContactSection() {
               placeholder="Tell me about your project..."
               rows={5}
               required
-              className="bg-neutral-800/60 border-neutral-700 focus:border-green-400"
+              className="bg-neutral-800/60 border-neutral-700 focus:border-[#00FF88]"
 
             />
 
             <Button type="submit" className="w-full
-    bg-green-400
+    bg-[#00FF88]
     text-black
     hover:shadow-[0_0_40px_rgba(0,255,136,0.5)]
     transition-all">
