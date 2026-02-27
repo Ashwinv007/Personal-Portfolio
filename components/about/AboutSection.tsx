@@ -5,8 +5,11 @@ export default function AboutSection() {
   return (
     <section id="about" className="relative bg-background py-24">
       <div className="container mx-auto max-w-4xl px-4 text-center">
-        <h2 className="mb-12 text-4xl font-bold text-[#00FFCE] md:text-5xl">
-          About Me
+        <h2 className="mb-12 text-4xl font-bold md:text-5xl">
+          About{" "}
+          <span className="bg-gradient-to-r from-[#00FF88] to-[#00FFCE] bg-clip-text text-transparent">
+            Me
+          </span>
         </h2>
 
         {/* Content */}

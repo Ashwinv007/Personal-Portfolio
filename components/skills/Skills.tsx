@@ -1,11 +1,5 @@
 import { getSkills } from "@/use-cases/get-skills"
 import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "@/components/ui/card"
-import {
   Globe,
   Palette,
   ShoppingCart,
@@ -50,43 +44,51 @@ export default async function Skills() {
   return (
     <section className="relative py-24">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center text-[#00FFCE]">
-          Skills
+        <p className="text-center text-sm tracking-widest text-[#00FFCE] mb-2">
+          SKILLS
+        </p>
+        <div className="mx-auto mb-6 h-[2px] w-12 bg-[#00FFCE]" />
+        <h2 className="text-center text-4xl font-medium leading-tight mb-16">
+          My{" "}
+          <span className="bg-gradient-to-r from-[#00FF88] to-[#00FFCE] bg-clip-text text-transparent">
+            Expertise
+          </span>
         </h2>
 
-        <div className="grid gap-5 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 md:px-8">
+        <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 md:px-8">
           {skills.map((skill) => {
             const IconComponent = getSkillIcon(skill.icon)
             return (
-              <Card
+              <div
                 key={skill.id}
                 className="
-                  relative
-                  rounded-2xl
-                  bg-white/[0.03]
-                  border border-white/[0.06]
-                  p-2
-                  shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]
+                  group relative overflow-hidden rounded-2xl
+                  border border-neutral-800
+                  bg-neutral-900/60 backdrop-blur
+                  p-6
                   transition-all duration-300
                   hover:border-[#00FFCE]/40
                   hover:shadow-[0_0_40px_rgba(0,255,206,0.12)]
                 "
               >
-                <CardHeader className="pb-2">
-                  <CardTitle className="flex items-center gap-3 text-lg font-semibold">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#00FFCE]/10 text-[#00FFCE]">
-                      <IconComponent className="h-5 w-5" />
-                    </span>
-                    {skill.title}
-                  </CardTitle>
-                </CardHeader>
+                {/* Left accent bar */}
+                <div className="absolute left-0 top-8 bottom-8 w-[2px] rounded-full bg-[#00FFCE]/0 group-hover:bg-[#00FFCE]/60 transition-all duration-300" />
 
-                <CardContent className="pt-0">
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {skill.description}
-                  </p>
-                </CardContent>
-              </Card>
+                {/* Icon */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#00FFCE]/10 text-[#00FFCE] group-hover:bg-[#00FFCE]/20 transition-colors duration-300">
+                  <IconComponent className="h-6 w-6" />
+                </div>
+
+                {/* Title */}
+                <h3 className="mt-4 mb-2 text-lg font-semibold text-white">
+                  {skill.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {skill.description}
+                </p>
+              </div>
             )
           })}
         </div>
