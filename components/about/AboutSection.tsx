@@ -12,41 +12,47 @@ export default function AboutSection() {
         {/* Content */}
         <div className="space-y-6 text-left">
           <h3 className="text-2xl font-semibold text-white md:text-3xl">
-            I&apos;m a Passionate{" "}
-            <span className="text-[#00FF88]">Web Developer</span>
+            {/* I&apos;m a Passionate{" "} */}
+            Engineering Real
+            <span className="text-[#00FF88]"> Applications </span>
           </h3>
 
           <div className="space-y-4 text-muted-foreground">
             <p>
-              With over 5 years of experience in web development, I specialize
-              in creating modern, responsive, and user-friendly websites. My
-              expertise spans across front-end and back-end technologies,
-              enabling me to deliver complete web solutions.
+              I am a full stack developer who focuses more on how system works
+              behind the screen than just how it looks. For me backend logic, database 
+              structure and scalability matters equally as frontend design. I work mainly
+              with Node.js, Express and MongoDB, and I try to build applications in a way
+              that they can handle real users and real business problems.
             </p>
 
             <p>
-              I&apos;m passionate about clean code, elegant design, and crafting
-              digital experiences that make a difference. Whether it&apos;s a
-              complex web application or a simple landing page, I bring
-              creativity and technical excellence to every project.
+              I did not come from a traditional computer science background. I learned by building, breaking and fixing things. Most
+              of my understanding comes from practical implementation, real use cases
+              and solving actual problems. I prefer working on complete flows like 
+              authentication, payments, role management, APIs and database architecture
+              rather than just static pages.
             </p>
 
             <p>
-              When I&apos;m not coding, you can find me exploring new
-              technologies, contributing to open-source projects, or mentoring
-              aspiring developers. I believe in continuous learning and staying
-              updated with the latest industry trends.
+              My goal is to build products that can scale. I am interested in startup
+              environments where execution speed and clear thinking matters. I keep
+              learning by building projects, improving system design 
+              thinking and understanding how real world applications operate internally.
             </p>
           </div>
 
           {/* CTA */}
           <div className="pt-6">
             <Button
+              asChild
               size="lg"
               className="gap-2 bg-[#00FF88] text-black font-semibold shadow-[0_0_20px_rgba(0,255,136,0.35)] hover:shadow-[0_0_40px_rgba(0,255,136,0.6)] transition-all"
             >
-              <Download className="h-4 w-4" />
-              Download CV
+              <a href="/cv.pdf" download="Ashwin_V_CV.pdf">
+                <Download className="h-4 w-4" />
+                Download CV
+              </a>
             </Button>
           </div>
         </div>

@@ -25,9 +25,10 @@ export default function ContactSection() {
             </h3>
 
             <p>
-              I'm always open to discussing new projects, creative ideas,
-              or opportunities to be part of your vision. Feel free to reach
-              out through the contact form or connect with me directly.
+              If you have a project idea or need help building a backend
+              driven web application, we can discuss it. I prefer understanding
+              the requirement clearly first, then structuring the system
+              properly before development.
             </p>
 
             <div className="space-y-4">

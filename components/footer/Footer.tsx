@@ -14,18 +14,17 @@ export default function Footer() {
 
             <div className="max-w-md text-muted-foreground">
               <p>
-                Creating beautiful, functional web experiences that make a
-                difference.
+                Working on meaningful projects and practical ideas.
               </p>
               <p>
-                Let’s build something amazing together.
+                If you have something in mind, feel free to reach out.
               </p>
             </div>
 
             {/* Socials */}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/Ashwinv007"
                 target="_blank"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
@@ -33,7 +32,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/ashwinv07"
                 target="_blank"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
@@ -41,7 +40,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:your@email.com"
+                href="mailto:ashwinv7527@gmail.com"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-800 hover:border-[#00FF88] transition-colors"
               >
                 <Mail className="h-5 w-5 text-white" />

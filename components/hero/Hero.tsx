@@ -37,9 +37,10 @@ export default function Hero() {
           </p>
 
           <p className="max-w-xl text-muted-foreground">
-            I craft beautiful, functional web experiences that solve real
-            problems. Specialized in modern web technologies and creating
-            seamless user interfaces.
+            I build real world web applications using MERN stack <br /> 
+            with proper backend logic, database design and clean <br /> 
+            frontend structure. Focusing more on how the system  <br /> 
+            works internally, scalability, and practical implementation.
           </p>
 
           {/* CTA */}
@@ -64,14 +65,14 @@ export default function Hero() {
           {/* Social icons */}
           <div className="flex gap-3 pt-2">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Ashwinv007"
               target="_blank"
               className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-700 bg-neutral-900/60 hover:border-[#00FF88] transition-colors"
             >
               <Github className="h-5 w-5 text-white" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/ashwinv07"
               target="_blank"
               className="flex h-10 w-10 items-center justify-center rounded-xl border border-neutral-700 bg-neutral-900/60 hover:border-[#00FF88] transition-colors"
             >
