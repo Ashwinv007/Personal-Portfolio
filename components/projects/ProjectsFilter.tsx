@@ -3,6 +3,8 @@
 import { useState } from "react"
 import ProjectCard from "./ProjectCard"
 
+const FILTER_TECHS = ["React", "Next.js", "CSS", "Node.js", "TypeScript", "Clean Architecture"]
+
 type Project = {
   id: number
   name: string
@@ -11,25 +13,18 @@ type Project = {
   demo_url?: string
   source_url?: string
   tech: string[]
-  category_id?: number
-}
-
-type Category = {
-  id: number
-  name: string
 }
 
 type Props = {
   projects: Project[]
-  categories: Category[]
 }
 
-export default function ProjectsFilter({ projects, categories }: Props) {
-  const [active, setActive] = useState<number | null>(null)
+export default function ProjectsFilter({ projects }: Props) {
+  const [active, setActive] = useState<string | null>(null)
 
   const filtered = active === null
     ? projects
-    : projects.filter((p) => p.category_id === active)
+    : projects.filter((p) => p.tech.includes(active))
 
   return (
     <>
@@ -45,17 +40,17 @@ export default function ProjectsFilter({ projects, categories }: Props) {
         >
           All
         </button>
-        {categories.map((cat) => (
+        {FILTER_TECHS.map((tech) => (
           <button
-            key={cat.id}
-            onClick={() => setActive(cat.id)}
+            key={tech}
+            onClick={() => setActive(tech)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-              active === cat.id
+              active === tech
                 ? "bg-[#00FF88] text-black"
                 : "border border-neutral-700 text-neutral-400 hover:border-[#00FF88] hover:text-[#00FF88]"
             }`}
           >
-            {cat.name}
+            {tech}
           </button>
         ))}
       </div>

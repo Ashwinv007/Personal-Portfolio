@@ -3,7 +3,7 @@ import { Download } from "lucide-react"
 
 export default function AboutSection() {
   return (
-    <section className="relative bg-background py-24">
+    <section id="about" className="relative bg-background py-24">
       <div className="container mx-auto max-w-4xl px-4 text-center">
         <h2 className="mb-12 text-4xl font-bold text-[#00FFCE] md:text-5xl">
           About Me
@@ -13,8 +13,8 @@ export default function AboutSection() {
         <div className="space-y-6 text-left">
           <h3 className="text-2xl font-semibold text-white md:text-3xl">
             {/* I&apos;m a Passionate{" "} */}
-            Engineering Real
-            <span className="text-[#00FF88]"> Applications </span>
+            Engineering
+            <span className="text-[#00FF88]"> Real Applications </span>
           </h3>
 
           <div className="space-y-4 text-muted-foreground">

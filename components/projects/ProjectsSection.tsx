@@ -1,9 +1,8 @@
 import { getProjects } from "@/use-cases/get-projects"
-import { getCategories } from "@/use-cases/get-categories"
 import ProjectsFilter from "./ProjectsFilter"
 
 export default async function ProjectsSection() {
-  const [projects, categories] = await Promise.all([getProjects(), getCategories()])
+  const projects = await getProjects()
 
   return (
     <section id="projects" className="relative py-24">
@@ -17,7 +16,7 @@ export default async function ProjectsSection() {
           </span>
         </h2>
 
-        <ProjectsFilter projects={projects} categories={categories} />
+        <ProjectsFilter projects={projects} />
       </div>
     </section>
   )
