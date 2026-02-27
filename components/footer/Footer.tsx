@@ -3,9 +3,9 @@ import { Github, Linkedin, Mail } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-neutral-800 bg-black">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 md:px-8">
         {/* Top */}
-        <div className="py-12 grid sm:grid-cols-2 gap-12">
+        <div className="py-12 grid sm:grid-cols-2 gap-8 sm:gap-12">
           {/* Left */}
           <div className="space-y-6">
             <h4 className="text-xl font-semibold text-white">

@@ -1,17 +1,18 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center p-5"
+      className="relative min-h-screen flex items-center px-5 md:px-10"
       style={{
         background:
           'radial-gradient(ellipse 900px 800px at 72% 50%, rgba(0,255,206,0.28) 0%, transparent 65%), #0a0a0a',
       }}
     >
 
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 py-20">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 py-20 md:py-28">
         {/* LEFT */}
         <div className="space-y-6">
           {/* Availability */}
@@ -42,19 +43,21 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <div className="flex gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
             <Button
+              asChild
               size="lg"
-              className="bg-[#00FF88] text-black font-semibold shadow-[0_0_20px_rgba(0,255,136,0.4)] hover:shadow-[0_0_40px_rgba(0,255,136,0.65)] transition-all"
+              className="w-full sm:w-auto bg-[#00FF88] text-black font-semibold shadow-[0_0_20px_rgba(0,255,136,0.4)] hover:shadow-[0_0_40px_rgba(0,255,136,0.65)] transition-all"
             >
-              Hire Me
+              <Link href="/#contact">Hire Me</Link>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
-              className="border-[#00FF88] text-[#00FF88] hover:bg-[#00FF88] hover:text-black transition-all"
+              className="w-full sm:w-auto border-[#00FF88] text-[#00FF88] hover:bg-[#00FF88] hover:text-black transition-all"
             >
-              View Projects
+              <Link href="/#projects">View Projects</Link>
             </Button>
           </div>
 
@@ -83,7 +86,7 @@ export default function Hero() {
           </div>
 
           {/* Tech Stack */}
-          <div className="pt-8">
+          <div className="pt-5 sm:pt-8">
             <p className="mb-3 text-sm text-muted-foreground">
               Tech Stack
             </p>

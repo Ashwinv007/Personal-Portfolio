@@ -24,7 +24,7 @@ export default function ProjectCard({
   bg-neutral-900/70
   backdrop-blur
   transition-all duration-300
-  hover:border-green-400/60
+  hover:border-[#00FF88]/60
   hover:shadow-[0_0_50px_rgba(0,255,136,0.18)]
 ">
       {/* Image */}
@@ -43,7 +43,7 @@ export default function ProjectCard({
       </div>
 
       {/* Content */}
-      <div className="p-6 pb-28">
+      <div className="p-4 pb-24 sm:p-6 sm:pb-28">
       <h3 className="text-xl font-medium text-white mb-3">
           {title}
         </h3>
@@ -58,10 +58,10 @@ export default function ProjectCard({
             <span
               key={t}
               className="rounded-full
-    bg-green-400/10
+    bg-[#00FF88]/10
     px-3 py-1
     text-xs
-    text-green-400"
+    text-[#00FF88]"
             >
               {t}
             </span>
@@ -70,13 +70,13 @@ export default function ProjectCard({
       </div>
 
       {/* Actions */}
-      <div className="absolute bottom-7 left-6 right-6 flex gap-3">
+      <div className="absolute bottom-5 left-4 right-4 sm:bottom-7 sm:left-6 sm:right-6 flex gap-3">
         {demoUrl && (
           <Button asChild className="flex-1
     bg-transparent
-    border border-green-400/60
-    text-green-400
-    hover:bg-green-400
+    border border-[#00FF88]/60
+    text-[#00FF88]
+    hover:bg-[#00FF88]
     hover:text-black
     hover:shadow-[0_0_25px_rgba(0,255,136,0.45)]
     transition-all">
@@ -92,9 +92,9 @@ export default function ProjectCard({
   className="
     flex-1
     bg-transparent
-    border border-green-400/60
-    text-green-400
-    hover:bg-green-400
+    border border-[#00FF88]/60
+    text-[#00FF88]
+    hover:bg-[#00FF88]
     hover:text-black
     hover:shadow-[0_0_25px_rgba(0,255,136,0.45)]
     transition-all

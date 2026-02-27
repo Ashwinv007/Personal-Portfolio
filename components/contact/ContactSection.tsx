@@ -6,8 +6,8 @@ import { Mail, Phone, MapPin, Send } from "lucide-react"
 
 export default function ContactSection() {
   return (
-  <section className="relative py-24">
-      <div className="container mx-auto px-4 sm:px-6">
+  <section id="contact" className="relative py-24">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <p className="text-center text-sm tracking-widest text-[#00FF88] mb-2">
           CONTACT
         </p>
@@ -43,7 +43,7 @@ export default function ContactSection() {
         rounded-xl
         border border-neutral-800
         bg-neutral-900/60
-        px-5 py-4
+        px-4 py-3 sm:px-5 sm:py-4
       "
     >
       <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#00FF88]/20 text-[#00FF88]">
@@ -71,7 +71,7 @@ export default function ContactSection() {
     border border-neutral-800
     bg-neutral-900/70
     backdrop-blur
-    p-8"
+    p-5 sm:p-8"
           >
             <h3 className="text-xl font-semibold text-white mb-2">Send Me a Message</h3>
 
