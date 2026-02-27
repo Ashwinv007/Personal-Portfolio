@@ -3,7 +3,7 @@ import { Download } from "lucide-react"
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative bg-background py-24">
+    <section id="about" className="relative py-24">
       <div className="container mx-auto max-w-4xl px-4 text-center">
         <h2 className="mb-12 text-4xl font-bold md:text-5xl">
           About{" "}
