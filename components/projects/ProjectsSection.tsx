@@ -6,7 +6,7 @@ export default async function ProjectsSection() {
 
   return (
     <section id="projects" className="relative py-24">
-      <div className="container mx-auto px-4 sm:px-6">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="text-center mb-14 leading-tight">
           <span className="block text-sm tracking-widest text-[#00FF88] mb-2">
             PORTFOLIO

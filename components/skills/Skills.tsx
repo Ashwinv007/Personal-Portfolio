@@ -43,7 +43,7 @@ export default async function Skills() {
 
   return (
     <section className="relative py-24">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <p className="text-center text-sm tracking-widest text-[#00FFCE] mb-2">
           SKILLS
         </p>
@@ -55,7 +55,7 @@ export default async function Skills() {
           </span>
         </h2>
 
-        <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 md:px-8">
+        <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((skill) => {
             const IconComponent = getSkillIcon(skill.icon)
             return (
