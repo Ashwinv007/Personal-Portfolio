@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import "./globals.css"
 import { Inter } from "next/font/google"
 
@@ -7,6 +8,12 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 })
+
+export const metadata: Metadata = {
+  title: "Ashwin V | Full Stack Developer",
+  description: "Portfolio of Ashwin V, a full stack developer specializing in Node.js, React, and Next.js.",
+  icons: { icon: "/favicon-code.svg" },
+}
 
 export default function RootLayout({
   children,
