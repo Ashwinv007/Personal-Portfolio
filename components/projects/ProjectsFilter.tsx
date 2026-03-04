@@ -3,7 +3,7 @@
 import { useState } from "react"
 import ProjectCard from "./ProjectCard"
 
-const FILTER_TECHS = ["React", "Next.js", "CSS", "Node.js", "TypeScript", "Clean Architecture"]
+const FILTER_TECHS = ["React", "Next.js", "CSS", "Node.js", "TypeScript", "Clean Architecture", "MVC", "Chrome Extension"]
 
 type Project = {
   id: number

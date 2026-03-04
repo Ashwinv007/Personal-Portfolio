@@ -1,41 +1,38 @@
 import { getSkills } from "@/use-cases/get-skills"
 import {
-  Globe,
-  Palette,
-  ShoppingCart,
-  Smartphone,
-  Search,
-  Code2,
-  Server,
-  Database,
-  Layout,
-  Zap,
+  Globe, Palette, ShoppingCart, Smartphone, Search,
+  Code2, Server, Database, Layout, Zap,
+  Network, Webhook, Cloud,
   type LucideIcon,
 } from "lucide-react"
 
-const svgToIcon: Record<string, LucideIcon> = {
-  "code.svg": Code2,
-  "code2.svg": Code2,
-  "design.svg": Palette,
-  "palette.svg": Palette,
-  "web.svg": Globe,
-  "globe.svg": Globe,
-  "mobile.svg": Smartphone,
-  "smartphone.svg": Smartphone,
-  "cart.svg": ShoppingCart,
-  "ecommerce.svg": ShoppingCart,
-  "shop.svg": ShoppingCart,
-  "search.svg": Search,
-  "seo.svg": Search,
-  "server.svg": Server,
-  "database.svg": Database,
-  "layout.svg": Layout,
-  "zap.svg": Zap,
+const iconMap: Record<string, LucideIcon> = {
+  server:     Server,
+  database:   Database,
+  network:    Network,
+  webhook:    Webhook,
+  cloud:      Cloud,
+  code2:      Code2,
+  code:       Code2,
+  zap:        Zap,
+  layout:     Layout,
+  globe:      Globe,
+  web:        Globe,
+  palette:    Palette,
+  design:     Palette,
+  mobile:     Smartphone,
+  smartphone: Smartphone,
+  cart:       ShoppingCart,
+  ecommerce:  ShoppingCart,
+  shop:       ShoppingCart,
+  search:     Search,
+  seo:        Search,
 }
 
 function getSkillIcon(icon: string | null): LucideIcon {
   if (!icon) return Globe
-  return svgToIcon[icon.toLowerCase()] ?? Globe
+  const key = icon.toLowerCase().replace(/\.svg$/, "")
+  return iconMap[key] ?? Globe
 }
 
 export default async function Skills() {
