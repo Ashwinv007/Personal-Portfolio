@@ -96,7 +96,7 @@ export default function Hero() {
               {[
                 { name: "HTML", emoji: "🌐" },
                 { name: "CSS", emoji: "🎨" },
-                { name: "JavaScript", emoji: "⚡" },
+                { name: "TypeScript", emoji: "⚡" },
                 { name: "React", emoji: "⚛️" },
                 { name: "Node.js", emoji: "🟢" },
                 { name: "Next.js", emoji: "▲" },
